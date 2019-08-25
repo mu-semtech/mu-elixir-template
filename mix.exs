@@ -22,7 +22,10 @@ defmodule Elixirtemplate.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:plug_cowboy, "~> 2.1"}
+      {:plug_cowboy, "~> 2.1"},
+      {:poison, "~> 4.0"},
+      {:uuid, "~> 1.1"},
+      {:httpoison, "~> 1.5"}
     ]
   end
 end
