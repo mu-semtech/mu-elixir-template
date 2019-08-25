@@ -5,6 +5,15 @@ Alpha version for a template for writing mu.semte.ch services in Elixir using pl
 ## Beware
 *This repository contains an alpha version for a template. This is not endorsed by mu.semte.ch!*
 
+## TODOS
+The following items still need to be done to make this service a proper microservice template:
+1. SPARQL query support
+2. UUID support
+3. SPARQL Escaping
+
+### Nice to have
+1. Live Reload
+
 ## Docker Compose
 To add an service based on this template to a mu.semte.ch app you can add the following snippet to your docker compose file. This snippet assumes you have created a new folder called my-new-service and have at the very least added an app.ex file in that folder as outlined in 'creating a new microservice' below.
 ```
