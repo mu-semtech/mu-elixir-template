@@ -7,8 +7,6 @@ Alpha version for a template for writing mu.semte.ch services in Elixir using pl
 
 ## TODOS
 The following items still need to be done to make this service a proper microservice template:
-1. SPARQL query support
-2. UUID support
 3. SPARQL Escaping
 
 ### Nice to have
@@ -49,6 +47,30 @@ defmodule Service.Router do
 end
 ```
 
+## Querying
+### SELECT
+SELECT queries can be done in the following way:
+```
+"SELECT DISTINCT(?predicate) WHERE {?s ?predicate ?type}"
+|> Support.query
+```
+### UPDATE
+
+UPDATE queries can be done in the following way:
+```
+"INSERT DATA {
+  GRAPH <#{default_graph()}> {
+  <http://example.com/example/1> rdf:type <http://example.com/Example> .
+  }
+}"
+|> Support.update
+```
+
+## UUID's
+To generate a uuid there is a helper function:
+```
+Support.generate_uuid()
+```
 ## Dependencies
 If you want to add dependencies you will need to provide a complete mix.exs file for this project.
 Create a mix.exs file with the following content:
