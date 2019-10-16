@@ -6,8 +6,7 @@ defmodule Elixirtemplate.Application do
 
   def start(_type, _args) do
     children = [
-      # {Plug.Cowboy, scheme: :http, plug: Template.TemplatePlug, options: [port: 80] }
-      {Plug.Cowboy, scheme: :http, plug: Service.Router, options: [port: 80] }
+      {Plug.Cowboy, scheme: :http, plug: Service.App, options: [port: 80] }
     ]
 
     opts = [strategy: :one_for_one, name: Elixirtemplate.Supervisor]

@@ -55,4 +55,8 @@ defmodule Support do
     |> ( &( &1.body ) ).()
     |> Poison.decode!
   end
+
+  def sparql_escape(value) do
+    String.replace(value, "\"", "\\\"")
+  end
 end

@@ -1,4 +1,4 @@
-defmodule Service.Router do
+defmodule Service.App do
   use Plug.Router
 
   plug :match
